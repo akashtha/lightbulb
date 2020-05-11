@@ -1,0 +1,15 @@
+---
+- name: Ensure apache is installed and started
+  hosts: web
+  become: yes
+  vars:
+    httpd_packages:
+      - httpd
+      - mod_wsgi
+    apache_test_message: This is a test message
+    apache_webserver_port: 80
+
+  tasks:
+    - name: ping the hosts
+      ping
+        
