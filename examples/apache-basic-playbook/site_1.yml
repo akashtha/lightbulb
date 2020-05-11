@@ -11,5 +11,5 @@
 
   tasks:
     - name: ping the hosts
-      ping
+      ping:
         
