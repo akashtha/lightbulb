@@ -3,6 +3,7 @@
   hosts: web
   become: yes
   vars:
+    var_1: 'Hello world'
     httpd_packages:
       - httpd
       - mod_wsgi
@@ -12,4 +13,7 @@
   tasks:
     - name: ping the hosts
       ping:
+    - name: show msg
+      debug:
+        msg: "{{var_1}}"
         
